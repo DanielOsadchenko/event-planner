@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function EventCard({
@@ -12,6 +13,7 @@ export default function EventCard({
   time,
   location,
   image,
+  id,
 }) {
   const [isClicked, setIsClicked] = useState(false);
 
@@ -37,7 +39,7 @@ export default function EventCard({
 
       {isClicked && (
         <div>
-          <button>More info</button>
+          <Link href={`/${id}`}>More info</Link>
         </div>
       )}
     </div>
