@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import categories from "@/data/category";
 import sortValues from "@/data/sortValues";
+import styles from "./ControlPanel.module.css";
 
 export default function ControlPanel({ filter, sort }) {
   const [filteredCategory, setFilteredCategory] = useState("");
@@ -19,8 +20,9 @@ export default function ControlPanel({ filter, sort }) {
     sort(e.target.value);
   };
   return (
-    <div>
+    <div className={styles.container}>
       <select
+        className={styles.select}
         id="filter"
         name="filter"
         value={filteredCategory}
@@ -38,6 +40,7 @@ export default function ControlPanel({ filter, sort }) {
       </select>
 
       <select
+        className={styles.select}
         id="sort"
         name="sort"
         value={sortedCategory}
@@ -53,7 +56,23 @@ export default function ControlPanel({ filter, sort }) {
             );
           })}
       </select>
-      <Link href="/newEvent">Add new Event</Link>
+      <Link className={styles.link} href="/newEvent">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M12 4V20M4 12L20 12"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </Link>
     </div>
   );
 }

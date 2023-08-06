@@ -1,0 +1,9 @@
+.select {
+  display: block;
+  width: 70px;
+  height: 48px;
+  background-color: var(--white-color);
+  padding: 12px 4px 12px 12px;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--small-border-radius);
+}

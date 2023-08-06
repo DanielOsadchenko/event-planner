@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import styles from "./LanguageSelect.module.css";
 
 export default function LanguageSelect() {
   const optionsList = ["UK", "EN"];
@@ -8,16 +9,18 @@ export default function LanguageSelect() {
 
   const options = optionsList.map((text, index) => {
     return (
-      <option key={index} value={index}>
+      <option className={styles.option} key={index} value={index}>
         {text}
       </option>
     );
   });
   return (
-    <div>
-      <select value={lang} onChange={(event) => setLang(event.target.value)}>
-        {options}
-      </select>
-    </div>
+    <select
+      className={styles.select}
+      value={lang}
+      onChange={(event) => setLang(event.target.value)}
+    >
+      {options}
+    </select>
   );
 }

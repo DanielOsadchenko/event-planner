@@ -1,3 +1,5 @@
+import styles from "./EventsList.module.css";
+
 export default function EventsList({ children }) {
-  return <ul>{children}</ul>;
+  return <ul className={styles.list}>{children}</ul>;
 }

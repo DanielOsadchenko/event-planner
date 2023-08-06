@@ -7,7 +7,12 @@ export default function DetailedEventCard({ event, handleDeleteEvent }) {
       <h2>{event.title}</h2>
 
       <div>
-        <Image src={event.image} alt="Event picture" />
+        <Image
+          src={event.image}
+          alt="Event picture"
+          width="auto"
+          height="auto"
+        />
         <div>
           <p>{event.desc}</p>
           <div>

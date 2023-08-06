@@ -1,0 +1,7 @@
+.logo {
+  display: inline-block;
+  font-family: "Alata", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--violet-color);
+}

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import styles from "./EventCard.module.css";
 
 export default function EventCard({
   title,
@@ -17,31 +18,43 @@ export default function EventCard({
 }) {
   const [isClicked, setIsClicked] = useState(false);
 
-  return (
-    <div>
-      <div onClick={() => setIsClicked(true)}>
-        <Image src={image} alt="Picture of an event" width={272} height={336} />
-        <div>
-          <p>{category}</p>
-          <p>{priority}</p>
-        </div>
-        <div>
-          <p>
-            {date} at {time}
-          </p>
-          <p>{location}</p>
-        </div>
-      </div>
-      <div>
-        <h2>{title}</h2>
-        <p>{desc}</p>
-      </div>
+  var dateString = date;
+  var dateParts = dateString.split("-");
+  var formattedDate = dateParts[2] + "." + dateParts[1];
 
-      {isClicked && (
-        <div>
-          <Link href={`/${id}`}>More info</Link>
+  return (
+    <div className={styles.card} onClick={() => setIsClicked(true)}>
+      <div className={styles.imgBox}>
+        <Image
+          className={styles.img}
+          src={image}
+          alt="Picture of an event"
+          width="auto"
+          height="auto"
+        />
+        <div className={styles.tagsBox}>
+          <p className={styles.category}>{category}</p>
+          <p className={`${styles.priority} ${priority}`}>{priority}</p>
         </div>
-      )}
+        <div className={styles.dateBox}>
+          <p className={styles.date}>
+            {formattedDate} at {time}
+          </p>
+          <p className={styles.location}>{location}</p>
+        </div>
+      </div>
+      <div className={styles.textBox}>
+        <h2 className={styles.title}>{title}</h2>
+        <p className={styles.desc}>{desc}</p>
+
+        {isClicked && (
+          <div className={styles.buttonBox}>
+            <Link className={styles.button} href={`/${id}`}>
+              More info
+            </Link>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

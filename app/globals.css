@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+:root {
+  --pink-color: #ff2b77;
+  --violet-color: #7b61ff;
+  --orange-color: #e2a300;
+  --green-color: #6bd475;
+  --grey-color: #3f3f3f;
+  --light-violet-color: #aca7c3;
+  --background-color: #FEFCFF
+  --black-color: #000000;
+  --white-color: #ffffff;
+  
+  --box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+
+  --small-border-radius: 8px;
+  --large-border-radius: 12px;
+
+  --card-transparent-bg: rgba(255, 255, 255, 0.80);
+  --card-transparent-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+body{ 
+  box-sizing: border-box;
+  margin: o auto;
+  background-color: var(--background-color);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+html {
+  scroll-behavior: smooth;
+
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--grey-color);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+*::placeholder {
+  color: #888888;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%;
+}
+
+.container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 24px;
+  
+
+  @media (min-width: 768px) {
+    width: 768px;
+    padding: 40px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 1280px;
+    padding: 10px;
+  }
+}
+
+
+.High {
+  color: var(--pink-color)
+}
+.Medium {
+  color: var(--orange-color)
+}
+.Low {
+  color: var(--green-color)
+}

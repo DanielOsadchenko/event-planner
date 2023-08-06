@@ -1,0 +1,14 @@
+.header {
+  width: 100%;
+  background-color: var(--background-color);
+
+  margin: 0 auto;
+  border-bottom: 1px solid var(--violet-color);
+}
+.box {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
