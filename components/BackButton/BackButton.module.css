@@ -1,0 +1,15 @@
+.link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 68px;
+  height: 24px;
+  text-align: end;
+  color: #7b61ff;
+  margin-top: 16px;
+}
+.svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}

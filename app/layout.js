@@ -15,8 +15,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <header className={styles.header}>
+      <body
+        style={{ backgroundImage: `url(${bgMob.src})`, minHeight: "100vh" }}
+      >
+        <header
+          className={styles.header}
+          style={{ backgroundColor: "#FEFCFF" }}
+        >
           <Container>
             <div className={styles.box}>
               <Logo />
@@ -25,7 +30,7 @@ export default function RootLayout({ children }) {
             </div>
           </Container>
         </header>
-        <main style={{ backgroundImage: `url(${bgMob.src})` }}>{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );

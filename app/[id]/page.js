@@ -1,11 +1,12 @@
 "use client";
 
 import useEventsStore from "@/store/zustand";
-import Link from "next/link";
+
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Container from "@/components/Container/Container";
 import DetailedEventCard from "@/components/DetailedEventCard/DetailedEventCard";
+import BackButton from "@/components/BackButton/BackButton";
 
 export default function DetailPage() {
   const pathname = usePathname();
@@ -23,8 +24,7 @@ export default function DetailPage() {
 
   return (
     <Container>
-      <Link href="/">Back</Link>
-
+      <BackButton back="/" />
       {event && (
         <DetailedEventCard
           event={event}

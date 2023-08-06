@@ -22,6 +22,7 @@
 }
 
 body{ 
+  
   box-sizing: border-box;
   margin: o auto;
   background-color: var(--background-color);
@@ -181,11 +182,11 @@ legend {
 
 
 .High {
-  color: var(--pink-color)
+  color: var(--pink-color) !important
 }
 .Medium {
-  color: var(--orange-color)
+  color: var(--orange-color) !important
 }
 .Low {
-  color: var(--green-color)
+  color: var(--green-color) !important
 }
