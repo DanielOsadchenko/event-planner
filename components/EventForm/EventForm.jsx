@@ -1,3 +1,5 @@
+import styles from "./EventForm.module.css";
+
 export default function EventForm({
   newEvent,
   handleChange,
@@ -6,8 +8,9 @@ export default function EventForm({
   priorities,
 }) {
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={styles.form}>
       <label htmlFor="title">Title</label>
+
       <input
         type="text"
         id="title"
@@ -20,7 +23,7 @@ export default function EventForm({
       />
 
       <label htmlFor="desc">Description</label>
-      <input
+      <textarea
         type="text"
         id="desc"
         name="description"
@@ -111,7 +114,11 @@ export default function EventForm({
           })}
       </select>
 
-      <button type="submit">Add event</button>
+      <div className={styles.btnBox}>
+        <button className={styles.submit} type="submit">
+          Add event
+        </button>
+      </div>
     </form>
   );
 }
