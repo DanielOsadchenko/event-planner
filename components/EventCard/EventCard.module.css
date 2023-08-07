@@ -8,6 +8,13 @@
   display: flex;
   flex-direction: row;
   align-items: end;
+
+  @media (min-width: 768px) {
+    width: 332px;
+  }
+  @media (min-width: 1280px) {
+    width: auto;
+  }
 }
 .card:hover .buttonBox {
   display: block;

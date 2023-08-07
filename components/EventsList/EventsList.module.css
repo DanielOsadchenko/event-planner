@@ -2,4 +2,14 @@
   display: grid;
   grid-template-columns: 100%;
   row-gap: 24px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 1280px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+    row-gap: 40px;
+  }
 }
