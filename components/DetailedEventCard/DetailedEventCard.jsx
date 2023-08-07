@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./DetailedEventCard.module.css";
+import Title from "../Title/Title";
 
 export default function DetailedEventCard({ event, handleDeleteEvent }) {
   var dateString = event.date;
@@ -8,7 +9,7 @@ export default function DetailedEventCard({ event, handleDeleteEvent }) {
   var formattedDate = dateParts[2] + "." + dateParts[1];
   return (
     <div className={styles.cardContainer}>
-      <h2 className={styles.title}>{event.title}</h2>
+      <Title text={event.title} />
 
       <div className={styles.card}>
         <div className={styles.imgBox}>

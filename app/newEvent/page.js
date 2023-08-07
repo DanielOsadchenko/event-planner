@@ -8,6 +8,8 @@ import priorities from "@/data/priority";
 import Container from "@/components/Container/Container";
 import EventForm from "@/components/EventForm/EventForm";
 import eventTemplate from "@/data/eventTemplate";
+import BackButton from "@/components/BackButton/BackButton";
+import Title from "@/components/Title/Title";
 export default function NewEvent() {
   const router = useRouter();
   const addEvent = useEventsStore((state) => state.addEvent);
@@ -32,10 +34,10 @@ export default function NewEvent() {
 
   return (
     <Container>
-      <Link href="/">Back</Link>
+      <BackButton back={"/"} />
 
       <div>
-        <h2>Create new event</h2>
+        <Title text={"Create new event"} />
       </div>
 
       <EventForm
@@ -44,6 +46,7 @@ export default function NewEvent() {
         handleSubmit={handleSubmit}
         categories={categories}
         priorities={priorities}
+        text={"Add event"}
       />
     </Container>
   );

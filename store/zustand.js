@@ -105,7 +105,7 @@ const useEventsStore = create((set) => ({
 
   editEvent: (changedEvent) =>
     set((state) => {
-      const editEvent = { ...changedEvent, image: defaultImage };
+      const editEvent = { ...changedEvent };
       const newEvents = state.events.filter((e) => e.id !== changedEvent.id);
       return { events: [...newEvents, editEvent] };
     }),

@@ -6,6 +6,6 @@ const eventTemplate = {
   date: "",
   time: "",
   location: "",
-  image: "",
+  image: "defaultImage",
 };
 export default eventTemplate;

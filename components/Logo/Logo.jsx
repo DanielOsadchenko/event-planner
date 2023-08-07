@@ -1,5 +1,15 @@
-import styles from "./Logo.module.css";
+"use client";
 
+import styles from "./Logo.module.css";
+import { useRouter } from "next/navigation";
 export default function Logo() {
-  return <h1 className={styles.logo}>Event Planner</h1>;
+  const router = useRouter();
+  const handleClick = () => {
+    router.push("/");
+  };
+  return (
+    <h1 className={styles.logo} onClick={handleClick}>
+      Event Planner
+    </h1>
+  );
 }

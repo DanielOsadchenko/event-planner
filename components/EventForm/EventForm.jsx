@@ -6,6 +6,7 @@ export default function EventForm({
   handleSubmit,
   categories,
   priorities,
+  text,
 }) {
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
@@ -90,6 +91,7 @@ export default function EventForm({
         onChange={handleChange}
         value={newEvent.image}
         required
+        disabled
       >
         <option value="">Choose image</option>
         <option value="Default image">Default image</option>
@@ -116,7 +118,7 @@ export default function EventForm({
 
       <div className={styles.btnBox}>
         <button className={styles.submit} type="submit">
-          Add event
+          {text}
         </button>
       </div>
     </form>

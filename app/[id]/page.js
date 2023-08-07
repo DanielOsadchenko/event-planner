@@ -24,7 +24,7 @@ export default function DetailPage() {
 
   return (
     <Container>
-      <BackButton back="/" />
+      <BackButton back={"/"} />
       {event && (
         <DetailedEventCard
           event={event}

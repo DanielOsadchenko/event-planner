@@ -67,9 +67,9 @@ export default function ControlPanel({ filter, sort }) {
           <path
             d="M12 4V20M4 12L20 12"
             stroke="white"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       </Link>

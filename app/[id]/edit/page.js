@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import useEventsStore from "@/store/zustand";
@@ -8,6 +8,8 @@ import priorities from "@/data/priority";
 import { usePathname } from "next/navigation";
 import EventForm from "@/components/EventForm/EventForm";
 import Container from "@/components/Container/Container";
+import BackButton from "@/components/BackButton/BackButton";
+import Title from "@/components/Title/Title";
 
 export default function EditEvent() {
   const router = useRouter();
@@ -41,10 +43,10 @@ export default function EditEvent() {
 
   return (
     <Container>
-      <Link href="/">Back</Link>
+      <BackButton back={`/${event.id}`} />
 
       <div>
-        <h2>Edit event</h2>
+        <Title text={"Edit event"} />
 
         <EventForm
           newEvent={newEvent}
@@ -52,6 +54,7 @@ export default function EditEvent() {
           handleSubmit={handleSubmit}
           categories={categories}
           priorities={priorities}
+          text={"Save event"}
         />
       </div>
     </Container>

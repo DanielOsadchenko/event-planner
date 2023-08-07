@@ -36,24 +36,22 @@ export default function EventCard({
           <p className={styles.category}>{category}</p>
           <p className={`${styles.priority} ${priority}`}>{priority}</p>
         </div>
+      </div>
+      <div className={styles.textBox}>
         <div className={styles.dateBox}>
           <p className={styles.date}>
             {formattedDate} at {time}
           </p>
           <p className={styles.location}>{location}</p>
         </div>
-      </div>
-      <div className={styles.textBox}>
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.desc}>{desc}</p>
 
-        {isClicked && (
-          <div className={styles.buttonBox}>
-            <Link className={styles.button} href={`/${id}`}>
-              More info
-            </Link>
-          </div>
-        )}
+        <div className={styles.buttonBox}>
+          <Link className={styles.button} href={`/${id}`}>
+            More info
+          </Link>
+        </div>
       </div>
     </div>
   );
