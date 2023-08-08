@@ -1,3 +1,5 @@
+"use client";
+
 import LanguageSelect from "@/components/LanguageSelect/LanguageSelect";
 import "./globals.css";
 import styles from "./layout.module.css";

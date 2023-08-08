@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./EventForm.module.css";
 
 export default function EventForm({
