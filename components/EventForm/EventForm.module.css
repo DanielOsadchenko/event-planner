@@ -17,7 +17,7 @@
   padding: 40px 16px;
 
   @media (min-width: 768px) {
-    height: 610px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -50,6 +50,7 @@
 .form textarea {
   display: block;
   width: 100%;
+  height: 56px;
   padding: 16px 12px;
   border-radius: 8px;
   border: 1px solid var(--divider, #aca7c3);
