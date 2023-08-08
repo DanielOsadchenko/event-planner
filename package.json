@@ -1,6 +1,7 @@
 {
   "name": "event-planner",
   "version": "0.1.0",
+  "homepage": "https://resplendent-banoffee-043437.netlify.app/",
   "private": true,
   "scripts": {
     "dev": "next dev",
