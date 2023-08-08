@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import LeftArrow from "../svg/LeftArrow";
 import styles from "./BackButton.module.css";
