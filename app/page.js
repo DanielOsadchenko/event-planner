@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import useEventsStore from "@/store/zustand";
-import styles from "./page.module.css";
 import EventsList from "@/components/EventsList/EventsList";
 import EventCard from "@/components/EventCard/EventCard";
 import ControlPanel from "@/components/ControlPanel/ControlPanel";

@@ -2,7 +2,6 @@
 
 import useEventsStore from "@/store/zustand";
 
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Container from "@/components/Container/Container";
 import DetailedEventCard from "@/components/DetailedEventCard/DetailedEventCard";
