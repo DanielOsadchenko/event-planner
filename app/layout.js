@@ -1,13 +1,9 @@
-"use client";
-
 import LanguageSelect from "@/components/LanguageSelect/LanguageSelect";
 import "./globals.css";
 import styles from "./layout.module.css";
 import MainInput from "@/components/MainInput/MainInput";
 import Logo from "@/components/Logo/Logo";
 import bg from "../public/assets/bg.svg";
-import bgMob from "../public/assets/bg-mobile.png";
-import Container from "@/components/Container/Container";
 
 export const metadata = {
   title: "Event Planner",
