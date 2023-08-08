@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 export default function Logo() {
   const router = useRouter();
   const handleClick = () => {
-    router.push("/");
+    router.replace("/");
   };
   return (
     <h1 className={styles.logo} onClick={handleClick}>
