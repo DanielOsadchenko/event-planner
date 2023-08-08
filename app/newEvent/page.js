@@ -20,7 +20,7 @@ export default function NewEvent() {
     addEvent(newEvent);
 
     setNewEvent(eventTemplate);
-    router.replace("");
+    router.replace("/");
   };
   const handleChange = (e) => {
     const key = e.target.id;
