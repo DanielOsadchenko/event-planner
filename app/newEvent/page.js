@@ -21,7 +21,7 @@ export default function NewEvent() {
     addEvent(newEvent);
 
     setNewEvent(eventTemplate);
-    router.push("/");
+    router.replace("/");
   };
   const handleChange = (e) => {
     const key = e.target.id;

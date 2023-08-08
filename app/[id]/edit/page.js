@@ -29,7 +29,7 @@ export default function EditEvent() {
   const handleSubmit = (e) => {
     e.preventDefault();
     editEvent(newEvent);
-    router.push(`/${event.id}`);
+    router.replace(`/${event.id}`);
   };
 
   const handleChange = (e) => {
