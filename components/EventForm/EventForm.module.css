@@ -1,9 +1,35 @@
-.form {
-  display: block;
-  padding: 40px 16px;
+.container {
   background-color: #ffffff;
   box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
   border-radius: 8px;
+  position: relative;
+
+  @media (min-width: 768px) {
+    height: 656px;
+  }
+
+  @media (min-width: 1280px) {
+    height: 490px;
+  }
+}
+.form {
+  display: block;
+  padding: 40px 16px;
+
+  @media (min-width: 768px) {
+    height: 610px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    padding: 40px 24px;
+  }
+
+  @media (min-width: 1280px) {
+    height: 400px;
+    column-gap: 24px;
+    padding: 40px 40px;
+  }
 }
 
 .form label {
@@ -30,13 +56,32 @@
   font-size: 16px;
   font-weight: 400px;
   margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    width: 308px;
+  }
+  @media (min-width: 1280px) {
+    width: 372px;
+  }
 }
 .form textarea {
   height: 156px;
 }
 
 .btnBox {
-  padding-top: 20px;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    padding: 40px 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  @media (min-width: 1280px) {
+    padding: 20px 40px;
+  }
 }
 .submit {
   display: block;

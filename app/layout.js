@@ -3,7 +3,7 @@ import "./globals.css";
 import styles from "./layout.module.css";
 import MainInput from "@/components/MainInput/MainInput";
 import Logo from "@/components/Logo/Logo";
-import bg from "../public/assets/bg.png";
+import bg from "../public/assets/bg.svg";
 import bgMob from "../public/assets/bg-mobile.png";
 import Container from "@/components/Container/Container";
 
@@ -15,20 +15,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        style={{ backgroundImage: `url(${bgMob.src})`, minHeight: "100vh" }}
-      >
+      <body style={{ backgroundImage: `url(${bg.src})`, minHeight: "100vh" }}>
         <header
           className={styles.header}
           style={{ backgroundColor: "#FEFCFF" }}
         >
-          <Container>
+          <div className={styles.headerContainer}>
             <div className={styles.box}>
-              <Logo />
-              <LanguageSelect />
-              <MainInput />
+              <Logo className={styles.first} />
+              <LanguageSelect className={styles.second} />
+              <MainInput className={styles.third} />
             </div>
-          </Container>
+          </div>
         </header>
         <main>{children}</main>
       </body>

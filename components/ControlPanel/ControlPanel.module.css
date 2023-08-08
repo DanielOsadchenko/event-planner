@@ -3,6 +3,11 @@
   padding: 16px 0 40px 0;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: 768px) {
+    justify-content: end;
+    gap: 24px;
+  }
 }
 .select {
   display: flex;
@@ -13,6 +18,10 @@
   border-radius: 8px;
   background: #fff;
   box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+  @media (min-width: 768px) {
+    width: 150px;
+    padding: 0 6px;
+  }
 }
 .link {
   display: flex;

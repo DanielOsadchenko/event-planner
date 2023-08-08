@@ -14,6 +14,7 @@ export default function DetailedEventCard({ event, handleDeleteEvent }) {
       <div className={styles.card}>
         <div className={styles.imgBox}>
           <Image
+            className={styles.img}
             src={event.image}
             alt="Event picture"
             width="auto"

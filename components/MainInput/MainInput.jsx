@@ -2,7 +2,7 @@
 import Image from "next/image";
 import useEventsStore from "@/store/zustand";
 import searchImage from "../../public/assets/search.png";
-import cross from "../../public/assets/cross-small.png";
+import cross from "../../public/assets/cross-small.svg";
 import styles from "./MainInput.module.css";
 export default function MainInput() {
   const [keyword, changeKeyword] = useEventsStore((state) => [

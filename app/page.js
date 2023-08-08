@@ -8,6 +8,7 @@ import EventCard from "@/components/EventCard/EventCard";
 import ControlPanel from "@/components/ControlPanel/ControlPanel";
 import sortValues from "@/data/sortValues";
 import Container from "@/components/Container/Container";
+import Title from "@/components/Title/Title";
 
 export default function Home() {
   const [events, keyword] = useEventsStore((state) => [
@@ -93,6 +94,8 @@ export default function Home() {
         sort={(value) => setSortValue(value)}
         filter={(value) => setFilterCategory(value)}
       />
+
+      <Title text={"My events"} />
       <EventsList>
         {visibleEvents &&
           visibleEvents.map((e) => {

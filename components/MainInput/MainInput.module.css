@@ -4,6 +4,17 @@
   position: relative;
   width: 272px;
   height: 48px;
+
+  @media (min-width: 768px) {
+    order: 1;
+    margin-top: 0;
+    width: 368px;
+    margin-left: 70px;
+  }
+  @media (min-width: 1280px) {
+    width: 410px;
+    margin-left: 550px;
+  }
 }
 .input {
   width: 100%;

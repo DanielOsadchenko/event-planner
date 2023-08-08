@@ -1,27 +1,15 @@
 import { create } from "zustand";
 import { nanoid } from "nanoid";
-import defaultImage from "../public/assets/cardImageDefault.png";
+import defaultImage from "../public/assets/default.svg";
 import image1 from "../public/assets/cardImage1.png";
 import image2 from "../public/assets/cardImage2.png";
 import image3 from "../public/assets/cardImage3.png";
 import image4 from "../public/assets/cardImage4.png";
 import image5 from "../public/assets/cardImage5.png";
 import image6 from "../public/assets/cardImage6.png";
-import image10 from "../public/assets/image10.jpg";
 
 const useEventsStore = create((set) => ({
   events: [
-    {
-      id: "10",
-      title: "My Birthday",
-      desc: "The best gift for me will be an internship at Soft Ryzen",
-      date: "2023-08-10",
-      time: "05:00",
-      category: "Party",
-      location: "Poland",
-      image: image10,
-      priority: "High",
-    },
     {
       id: "1",
       title: "Galery Opening",
